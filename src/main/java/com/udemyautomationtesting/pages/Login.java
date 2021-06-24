@@ -1,6 +1,6 @@
 package com.udemyautomationtesting.pages;
 
-import com.udemyautomationtesting.base.Base;
+import com.udemyautomationtesting.base.BaseClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,12 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.Set;
 
-public class Login extends Base {
-    //object reference is declared
-    WebDriver driver;
+public class Login extends BaseClass {
 
-    //object references are declared and uses FindBy annotation to locate the web element
-    @FindBy(xpath = "//span[contains(text(),'Log in')]")
+    //web elements are declared and FindBy annotation is used to find web elements by using locators
+    @FindBy(linkText = "Log in")
     WebElement loginLink;
     @FindBy(name = "email")
     WebElement email;
@@ -38,12 +36,11 @@ public class Login extends Base {
 
     //parameterized constructor is used
     public Login(WebDriver driver) {
-        this.driver = driver;
         PageFactory.initElements(driver, this); //initElements method is used from PageFactory class
     }
 
-    //multiple methods are created for multiple actions
-    private void clickLoginLink() {
+    //multiple methods are created for multiple web elements actions
+    public void clickLoginLink() {
         loginLink.click();
     }
 
@@ -120,18 +117,14 @@ public class Login extends Base {
             System.out.println(winHandle);
             String actual = driver.getTitle();
             System.out.println(actual);
-            System.out.println("Before if");
-
-            if (actual.equals("Sign in – Google accounts")) {
-                System.out.println("After if");
-                setGoogleEmail("dineshkumar.icon@gmail.com");
-                clickNext();
-                Thread.sleep(3000);
-                setGooglePassword("Dinnu@366247");
-                clickNext();
-                Thread.sleep(3000);
-            }
         }
+
+        setGoogleEmail("dineshkumar.icon@gmail.com");
+        clickNext();
+        Thread.sleep(1000);
+        setGooglePassword("Dinnu@247");
+        clickNext();
+        Thread.sleep(3000);
 
         return driver.getTitle();
     }
