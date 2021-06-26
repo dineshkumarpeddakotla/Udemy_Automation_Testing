@@ -24,7 +24,7 @@ public class BaseClass {
     }
 
     //tearDown method closes all connections
-    //execute after test
+    @AfterTest //execute after test
     public void tearDown() {
         driver.quit();
     }
