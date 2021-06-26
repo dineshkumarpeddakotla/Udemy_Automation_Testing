@@ -1,7 +1,7 @@
-package com.udemyautomationtesting.listener;
+package com.udemyautomationtesting.utility.listener;
 
 import com.udemyautomationtesting.base.BaseClass;
-import com.udemyautomationtesting.screenshot.CaptureScreenshot;
+import com.udemyautomationtesting.utility.CaptureScreenshot;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 

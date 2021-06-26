@@ -1,4 +1,4 @@
-package com.udemyautomationtesting.screenshot;
+package com.udemyautomationtesting.utility;
 
 import com.udemyautomationtesting.base.BaseClass;
 import org.apache.commons.io.FileUtils;

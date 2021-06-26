@@ -91,7 +91,7 @@ public class Login extends BaseClass {
      */
     public String login() throws InterruptedException {
         clickLoginLink();
-        setEmail("dineshkumar.icon@gmail.com");
+        setEmail("dineshkumar.icon.dk@gmail.com");
         setPassword("Dinnu@247");
         clickLogin();
 

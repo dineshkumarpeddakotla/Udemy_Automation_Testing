@@ -15,6 +15,12 @@ public class HomePage extends BaseClass {
     WebElement searchButton;
     @FindBy(linkText = "My learning")
     WebElement myLearning;
+    @FindBy(xpath = "//a[@href = '/course/selenium-real-time-examplesinterview-questions/']")
+    WebElement course;
+    @FindBy(xpath = "//a[@href = '/cart/']")
+    WebElement cart;
+    @FindBy(xpath = "//a[@href='/user/edit-profile/']")
+    WebElement myProfile;
 
     //parameterized constructor is used
     public HomePage(WebDriver driver) {
@@ -34,6 +40,14 @@ public class HomePage extends BaseClass {
         myLearning.click();
     }
 
+    public void clickCourse() {
+        course.click();
+    }
+
+    public void clickCart() {
+        cart.click();
+    }
+
     /**
      * search method is used to search courses or authors etc.,
      * @return title of the page
@@ -44,7 +58,7 @@ public class HomePage extends BaseClass {
         clickSearchButton();
         Thread.sleep(2000);
 
-        return driver.getTitle();
+        return driver.getCurrentUrl();
     }
 
     /**
@@ -53,6 +67,18 @@ public class HomePage extends BaseClass {
      */
     public String myLearning() {
         clickMyLearning();
+
+        return driver.getCurrentUrl();
+    }
+
+    public Boolean openCourse() throws InterruptedException {
+        clickCourse();
+        Thread.sleep(3000);
+        return course.isDisplayed();
+    }
+
+    public String openMyProfile() {
+        myProfile.click();
 
         return driver.getCurrentUrl();
     }
