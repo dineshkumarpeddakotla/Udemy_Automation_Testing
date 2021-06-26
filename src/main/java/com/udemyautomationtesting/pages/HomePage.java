@@ -40,7 +40,7 @@ public class HomePage extends BaseClass {
         myLearning.click();
     }
 
-    public void clickCourse() {
+    public void selectCourse() {
         course.click();
     }
 
@@ -72,7 +72,7 @@ public class HomePage extends BaseClass {
     }
 
     public Boolean openCourse() throws InterruptedException {
-        clickCourse();
+        selectCourse();
         Thread.sleep(3000);
         return course.isDisplayed();
     }

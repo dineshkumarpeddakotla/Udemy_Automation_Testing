@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class UserProfile extends BaseClass {
+public class User extends BaseClass {
 
     @FindBy(xpath = "//a[contains(text(),'View public profile')]")
     WebElement publicProfile;
@@ -17,7 +17,7 @@ public class UserProfile extends BaseClass {
     @FindBy(xpath = "//a[contains(text(),'Account')]")
     WebElement account;
 
-    public UserProfile(WebDriver driver) {
+    public User(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 

@@ -62,7 +62,7 @@ public class Registration extends BaseClass {
         Thread.sleep(2000);
         setFullName("dinesh");
         setEmail("dineshkumar.icon.dk@gmail.com");
-        setPassword("Dinnu@247");
+        setPassword(" ");
         clickSignUpButton();
 
         return driver.getTitle();
@@ -74,7 +74,7 @@ public class Registration extends BaseClass {
      * @return page title
      * @throws InterruptedException interrupts the execution for certain period
      */
-    public String alreadyRegistered() throws InterruptedException {
+    public String alreadyRegistered_User_ClickOnLogIn() throws InterruptedException {
         clickSignUp();
         Thread.sleep(3000);
         clickLogin();

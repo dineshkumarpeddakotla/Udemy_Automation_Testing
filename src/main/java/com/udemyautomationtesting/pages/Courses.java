@@ -9,13 +9,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Courses extends BaseClass {
 
-    @FindBy(xpath = "//button[@class= 'udlite-btn udlite-btn-large udlite-btn-brand udlite-heading-md add-to-cart']")
-    WebElement addToCart;
-    @FindBy(xpath = "//button[@class = 'udlite-btn udlite-btn-medium udlite-btn-ghost udlite-heading-sm udlite-btn-icon" +
-            " udlite-btn-icon-medium udlite-modal-close modal--close-button--28QM_']")
-    WebElement cancelButton;
-    @FindBy(xpath = "//button[contains(text(),'Go to cart')]")
-    WebElement goToCart;
+    @FindBy(xpath = "//span[contains(text(), 'Filter')]")
+    WebElement filter;
+    @FindBy(xpath = "//div[@class = 'filter-panel--sidebar--L2lAU']")
+    WebElement filterSideBar;
     @FindBy(xpath = "//span[contains(text(), '4.5 & up')]")
     WebElement radioButton1;
     @FindBy(xpath = "//span[contains(text(), '4.0 & up')]")
@@ -24,8 +21,6 @@ public class Courses extends BaseClass {
     WebElement radioButton3;
     @FindBy(xpath = "//span[contains(text(), '3.0 & up')]")
     WebElement radioButton4;
-    @FindBy(xpath = "//span[contains(text(), 'Filter')]")
-    WebElement filter;
     @FindBy(xpath = "//label[1][contains(text(),'0-3')]")
     WebElement dur0To3hrs;
     @FindBy(xpath = "//label[2][contains(text(),'3-6')]")
@@ -36,6 +31,13 @@ public class Courses extends BaseClass {
     WebElement durAbove17hrs;
     @FindBy(xpath = "//select[@name = 'sort']")
     WebElement sort;
+    @FindBy(xpath = "//button[@class= 'udlite-btn udlite-btn-large udlite-btn-brand udlite-heading-md add-to-cart']")
+    WebElement addToCart;
+    @FindBy(xpath = "//button[@class = 'udlite-btn udlite-btn-medium udlite-btn-ghost udlite-heading-sm udlite-btn-icon" +
+            " udlite-btn-icon-medium udlite-modal-close modal--close-button--28QM_']")
+    WebElement cancelButton;
+    @FindBy(xpath = "//button[contains(text(),'Go to cart')]")
+    WebElement goToCart;
 
     public Courses(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -63,7 +65,7 @@ public class Courses extends BaseClass {
 
     public Boolean courseAddedToCart() throws InterruptedException {
         clickOnAddCart();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         driver.switchTo().activeElement();
         cancelButton.click();
 
@@ -73,7 +75,7 @@ public class Courses extends BaseClass {
     public Boolean filter() {
         filter.click();
 
-        return filter.isDisplayed();
+        return filterSideBar.isDisplayed();
     }
 
     public Boolean clickDur0To3hrs() {

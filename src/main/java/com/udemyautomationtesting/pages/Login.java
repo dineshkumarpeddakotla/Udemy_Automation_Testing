@@ -23,7 +23,7 @@ public class Login extends BaseClass {
     WebElement continueWithGoogle;
     @FindBy(id = "identifierId")
     WebElement googleEmail;
-    @FindBy(linkText = "Next")
+    @FindBy(xpath = "//span[contains(text(),'Next')]")
     WebElement next;
     @FindBy(name = "password")
     WebElement googlePassword;
@@ -92,7 +92,7 @@ public class Login extends BaseClass {
     public String login() throws InterruptedException {
         clickLoginLink();
         setEmail("dineshkumar.icon.dk@gmail.com");
-        setPassword("Dinnu@247");
+        setPassword(" ");
         clickLogin();
 
         Thread.sleep(2000);
@@ -119,10 +119,10 @@ public class Login extends BaseClass {
             System.out.println(actual);
         }
 
-        setGoogleEmail("dineshkumar.icon@gmail.com");
+        setGoogleEmail("dineshkumar.icon.dk@gmail.com");
         clickNext();
         Thread.sleep(1000);
-        setGooglePassword("Dinnu@247");
+        setGooglePassword("  ");
         clickNext();
         Thread.sleep(3000);
 
@@ -139,7 +139,7 @@ public class Login extends BaseClass {
         clickContinueWithFacebook();
         Thread.sleep(3000);
         setEmail("dineshkumar.icon@gmail.com");
-        setFacebookPassword("dinnu247");
+        setFacebookPassword("  ");
         clickFLogin();
         Thread.sleep(1000);
 
