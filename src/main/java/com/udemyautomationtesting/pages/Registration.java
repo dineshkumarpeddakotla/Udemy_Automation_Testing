@@ -1,3 +1,13 @@
+/*
+ *Purpose : Class is implemented with pom and page factory model to find the webElements
+ *          by using locators in Registration Page and different methods are implemented
+ *          to execute operations
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 23-06-2021
+ */
+
 package com.udemyautomationtesting.pages;
 
 import com.udemyautomationtesting.base.BaseClass;
@@ -62,7 +72,7 @@ public class Registration extends BaseClass {
         Thread.sleep(2000);
         setFullName("dinesh");
         setEmail("dineshkumar.icon.dk@gmail.com");
-        setPassword(" ");
+        setPassword("Dinnu@247");
         clickSignUpButton();
 
         return driver.getTitle();
@@ -70,7 +80,7 @@ public class Registration extends BaseClass {
 
     /**
      * alreadyRegistered method is used, if a user is already registered
-     * then user will directly click login button
+     * then user will directly click login button and directed to login page
      * @return page title
      * @throws InterruptedException interrupts the execution for certain period
      */

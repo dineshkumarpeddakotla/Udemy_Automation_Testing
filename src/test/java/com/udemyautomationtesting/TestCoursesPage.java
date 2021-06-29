@@ -1,3 +1,13 @@
+/*
+ *Purpose : Class is implemented for executing the different test cases for CoursePage
+ *               @Test annotation represents to identify and execute testcase
+ *               @Listeners annotation is used to make listen instructions before and after testcases
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 25-06-2021
+ */
+
 package com.udemyautomationtesting;
 
 import com.udemyautomationtesting.base.BaseClass;
@@ -12,17 +22,19 @@ import org.testng.annotations.Test;
 @Listeners(CustomListener.class)
 public class TestCoursesPage extends BaseClass {
 
+    //checkFilterButton test is executed and assertion done for filter button displayed or not
     @Test
     public void checkFilterButton() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         homePage.search();
 
         Courses courses = new Courses(driver);
-        Boolean filterDisplayed = courses.filter();
+        Boolean filterDisplayed = courses.clickFilter();
 
         Assert.assertTrue(filterDisplayed);
     }
 
+    //sort_Courses test method is executed and assertion is done for courses as per selected drop down list option
     @Test
     public void sort_Courses() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -35,6 +47,7 @@ public class TestCoursesPage extends BaseClass {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    //filterCourse_ByRatings test method is executed and assertion is done for filter courses are displayed as per rating
     @Test
     public void filterCourse_ByRatings() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -48,6 +61,8 @@ public class TestCoursesPage extends BaseClass {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    //selectAll_VideoDuration_CheckBoxes test is executed and assertion is done for courses are displayed
+    //as per the selected check boxes
     @Test
     public void selectAll_VideoDuration_CheckBoxes() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
@@ -61,6 +76,7 @@ public class TestCoursesPage extends BaseClass {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    //checkCourse_AddedToCart test is executed and assertion is done for course is added to cart or not
     @Test
     public void checkCourse_AddedToCart() throws InterruptedException {
         Login login = new Login(driver);

@@ -1,3 +1,11 @@
+/*
+ *Purpose : Class is implemented for taking screenshots and place those screenshot in necessary directory
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 24-06-2021
+ */
+
 package com.udemyautomationtesting.utility;
 
 import com.udemyautomationtesting.base.BaseClass;

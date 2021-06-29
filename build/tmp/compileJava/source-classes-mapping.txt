@@ -1,3 +1,5 @@
+com/udemyautomationtesting/utility/listener/JavaScriptUtil.java
+ com.udemyautomationtesting.utility.listener.JavaScriptUtil
 com/udemyautomationtesting/utility/listener/CustomListener.java
  com.udemyautomationtesting.utility.listener.CustomListener
 com/udemyautomationtesting/pages/Registration.java
@@ -6,11 +8,13 @@ com/udemyautomationtesting/base/BaseClass.java
  com.udemyautomationtesting.base.BaseClass
 com/udemyautomationtesting/utility/CaptureScreenshot.java
  com.udemyautomationtesting.utility.CaptureScreenshot
-com/udemyautomationtesting/pages/User.java
- com.udemyautomationtesting.pages.User
-com/udemyautomationtesting/pages/Login.java
- com.udemyautomationtesting.pages.Login
 com/udemyautomationtesting/pages/HomePage.java
  com.udemyautomationtesting.pages.HomePage
+com/udemyautomationtesting/pages/Login.java
+ com.udemyautomationtesting.pages.Login
+com/udemyautomationtesting/utility/EnterDataUsingRobotClass.java
+ com.udemyautomationtesting.utility.EnterDataUsingRobotClass
 com/udemyautomationtesting/pages/Courses.java
  com.udemyautomationtesting.pages.Courses
+com/udemyautomationtesting/pages/User.java
+ com.udemyautomationtesting.pages.User

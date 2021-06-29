@@ -1,3 +1,12 @@
+/*
+ *Purpose : Class is implemented with pom and page factory model to find the webElements
+ *          by using locators in Login Page and different methods are implemented to execute operations
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 23-06-2021
+ */
+
 package com.udemyautomationtesting.pages;
 
 import com.udemyautomationtesting.base.BaseClass;
@@ -92,7 +101,7 @@ public class Login extends BaseClass {
     public String login() throws InterruptedException {
         clickLoginLink();
         setEmail("dineshkumar.icon.dk@gmail.com");
-        setPassword(" ");
+        setPassword("Dinnu@247");
         clickLogin();
 
         Thread.sleep(2000);

@@ -1,3 +1,13 @@
+/*
+ *Purpose : Class is implemented for executing the different test cases for HomePage
+ *               @Test annotation represents to identify and execute testcase
+ *               @Listeners annotation is used to make listen instructions before and after testcases
+ *
+ * @author Dinesh Kumar Peddakotla
+ * @version 1.0
+ * @since 24-06-2021
+ */
+
 package com.udemyautomationtesting;
 
 import com.udemyautomationtesting.base.BaseClass;
@@ -49,6 +59,7 @@ public class TestHomePage extends BaseClass {
         Assert.assertTrue(courseDisplayed);
     }
 
+    //open_UserProfile test is executed and assertion is done for user profile page is opened
     @Test
     public void open_UserProfile() throws InterruptedException {
         Login login = new Login(driver);
@@ -61,4 +72,28 @@ public class TestHomePage extends BaseClass {
         Assert.assertEquals(actualUrl, expectedUrl);
     }
 
+    //open_UdemyCredits test is executed and assertion is done for Udemy Credits page is opened
+    @Test
+    public void open_UdemyCredits() throws InterruptedException {
+        Login login = new Login(driver);
+        login.login();
+
+        HomePage homePage = new HomePage(driver);
+        String actualUrl = homePage.openUdemyCredits();
+        String expectedUrl = "https://www.udemy.com/dashboard/credit-history/";
+
+        Assert.assertEquals(actualUrl, expectedUrl);
+    }
+
+    //logoutFromApplication test is executed and assertion is done for whether the user is successfully logout
+    @Test
+    public void logoutFromApplication() throws InterruptedException {
+        Login login = new Login(driver);
+        login.login();
+
+        HomePage homePage = new HomePage(driver);
+        Boolean logout = homePage.applicationLogout();
+
+        Assert.assertTrue(logout);
+    }
 }
