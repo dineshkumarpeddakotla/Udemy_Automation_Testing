@@ -1,10 +1,10 @@
-com/udemyautomationtesting/TestLoginPage.java
- com.udemyautomationtesting.TestLoginPage
+com/udemyautomationtesting/TestUserPage.java
+ com.udemyautomationtesting.TestUserPage
 com/udemyautomationtesting/TestRegistrationPage.java
  com.udemyautomationtesting.TestRegistrationPage
 com/udemyautomationtesting/TestCoursesPage.java
  com.udemyautomationtesting.TestCoursesPage
 com/udemyautomationtesting/TestHomePage.java
  com.udemyautomationtesting.TestHomePage
-com/udemyautomationtesting/TestUserPage.java
- com.udemyautomationtesting.TestUserPage
+com/udemyautomationtesting/TestLoginPage.java
+ com.udemyautomationtesting.TestLoginPage

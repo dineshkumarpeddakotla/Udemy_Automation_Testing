@@ -80,7 +80,7 @@ public class TestCoursesPage extends BaseClass {
     @Test
     public void checkCourse_AddedToCart() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         homePage.search();

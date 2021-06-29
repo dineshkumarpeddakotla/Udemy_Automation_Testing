@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.udemyautomationtesting.TestUserPage" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-28T12:46:53" hostname="DINNU" time="38.814">
-  <properties/>
-  <testcase name="upload_ImageToProfile" classname="com.udemyautomationtesting.TestUserPage" time="38.814"/>
-  <system-out><![CDATA[Method passed upload_ImageToProfile
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

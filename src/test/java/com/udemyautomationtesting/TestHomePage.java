@@ -39,7 +39,7 @@ public class TestHomePage extends BaseClass {
     @Test
     public void checkMyLearning() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
         Thread.sleep(2000);
 
         HomePage myLearning = new HomePage(driver);
@@ -63,7 +63,7 @@ public class TestHomePage extends BaseClass {
     @Test
     public void open_UserProfile() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         String actualUrl = homePage.openMyProfile();
@@ -76,7 +76,7 @@ public class TestHomePage extends BaseClass {
     @Test
     public void open_UdemyCredits() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         String actualUrl = homePage.openUdemyCredits();
@@ -89,7 +89,7 @@ public class TestHomePage extends BaseClass {
     @Test
     public void logoutFromApplication() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         Boolean logout = homePage.applicationLogout();

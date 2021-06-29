@@ -27,7 +27,7 @@ public class TestUserPage extends BaseClass {
     @Test
     public void openPublicProfile() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         homePage.openMyProfile();
@@ -43,7 +43,7 @@ public class TestUserPage extends BaseClass {
     @Test
     public void openEdit_Profile() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         homePage.openMyProfile();
@@ -59,7 +59,7 @@ public class TestUserPage extends BaseClass {
     @Test
     public void openEdit_Photo() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         homePage.openMyProfile();
@@ -75,7 +75,7 @@ public class TestUserPage extends BaseClass {
     @Test
     public void openEdit_Account() throws InterruptedException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         homePage.openMyProfile();
@@ -91,7 +91,7 @@ public class TestUserPage extends BaseClass {
     @Test
     public void upload_ImageToProfile() throws InterruptedException, AWTException {
         Login login = new Login(driver);
-        login.login();
+        login.login("dineshkumar.icon@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         homePage.openMyProfile();

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.udemyautomationtesting.TestLoginPage" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-29T08:16:03" hostname="DINNU" time="14.716">
+  <properties/>
+  <testcase name="loginTo_Application_WithValidEmail_And_BlankPassword" classname="com.udemyautomationtesting.TestLoginPage" time="14.716"/>
+  <system-out><![CDATA[Method passed loginTo_Application_WithValidEmail_And_BlankPassword
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

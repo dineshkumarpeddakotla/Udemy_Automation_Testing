@@ -42,6 +42,8 @@ public class Login extends BaseClass {
     WebElement facebookPassword;
     @FindBy(id = "loginbutton")
     WebElement fLogin;
+    @FindBy(xpath = "//div[@class='alert alert-danger js-error-alert']")
+    WebElement alertMessage;
 
     //parameterized constructor is used
     public Login(WebDriver driver) {
@@ -98,13 +100,13 @@ public class Login extends BaseClass {
      * @return page title
      * @throws InterruptedException interrupts the execution for certain period
      */
-    public String login() throws InterruptedException {
+    public String login(String email, String password) throws InterruptedException {
         clickLoginLink();
-        setEmail("dineshkumar.icon.dk@gmail.com");
-        setPassword("Dinnu@247");
+        setEmail(email);
+        setPassword(password);
         clickLogin();
-
         Thread.sleep(2000);
+
         return driver.getTitle();
     }
 
