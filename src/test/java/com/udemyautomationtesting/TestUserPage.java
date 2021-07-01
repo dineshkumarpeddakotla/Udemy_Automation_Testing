@@ -13,14 +13,14 @@ import com.udemyautomationtesting.base.BaseClass;
 import com.udemyautomationtesting.pages.HomePage;
 import com.udemyautomationtesting.pages.Login;
 import com.udemyautomationtesting.pages.User;
-import com.udemyautomationtesting.utility.listener.CustomListener;
+import com.udemyautomationtesting.utility.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.awt.*;
 
-@Listeners(CustomListener.class)
+@Listeners(TestListener.class)
 public class TestUserPage extends BaseClass {
 
     //openPublicProfile test is executed and assertion is done whether the public profile is opened

@@ -8,13 +8,11 @@
 
 package com.udemyautomationtesting.utility;
 
-import com.udemyautomationtesting.base.BaseClass;
-
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
-public class EnterDataUsingRobotClass extends BaseClass {
+public class EnterDataUsingRobotClass {
 
     /**
      * setClipboardData method is used to enter the data into a windows based application using robot class

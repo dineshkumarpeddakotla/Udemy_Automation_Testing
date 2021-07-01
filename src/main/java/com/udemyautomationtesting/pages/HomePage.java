@@ -97,7 +97,7 @@ public class HomePage extends BaseClass {
      * @throws InterruptedException interrupts execution for certain given period of time
      */
     public Boolean openCourse() throws InterruptedException {
-        JavaScriptUtil.scrollIntoView(course, driver);
+        JavaScriptUtil.scrollIntoView(course);
         selectCourse();
         Thread.sleep(3000);
 

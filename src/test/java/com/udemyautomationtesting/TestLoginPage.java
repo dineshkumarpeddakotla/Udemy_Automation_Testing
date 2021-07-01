@@ -11,19 +11,20 @@ package com.udemyautomationtesting;
 
 import com.udemyautomationtesting.base.BaseClass;
 import com.udemyautomationtesting.pages.Login;
-import com.udemyautomationtesting.utility.listener.CustomListener;
+import com.udemyautomationtesting.utility.DataProvider;
+import com.udemyautomationtesting.utility.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListener.class)
+@Listeners(TestListener.class)
 public class TestLoginPage extends BaseClass {
 
     //Test case is executed and assertion is done for login
-    @Test
-    public void loginTo_Application_WithValid_Credentials() throws InterruptedException {
+    @Test(dataProvider = "LoginDetails", dataProviderClass = DataProvider.class)
+    public void loginTo_Application_WithValid_Credentials(String email, String password) throws InterruptedException {
         Login login = new Login(driver);
-        String actualTitle = login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
+        String actualTitle = login.login(email,password);
         String expectedTitle = "Online Courses - Anytime, Anywhere | Udemy";
 
         Assert.assertEquals(actualTitle, expectedTitle);

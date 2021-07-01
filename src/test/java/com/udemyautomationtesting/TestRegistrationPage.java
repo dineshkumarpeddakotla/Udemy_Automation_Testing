@@ -11,13 +11,13 @@ package com.udemyautomationtesting;
 
 import com.udemyautomationtesting.base.BaseClass;
 import com.udemyautomationtesting.pages.*;
-import com.udemyautomationtesting.utility.listener.CustomListener;
+import com.udemyautomationtesting.utility.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
-@Listeners(CustomListener.class)
+@Listeners(TestListener.class)
 public class TestRegistrationPage extends BaseClass {
 
     //Test case is executed and assertion is done for Sign Up

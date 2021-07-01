@@ -13,12 +13,12 @@ package com.udemyautomationtesting;
 import com.udemyautomationtesting.base.BaseClass;
 import com.udemyautomationtesting.pages.HomePage;
 import com.udemyautomationtesting.pages.Login;
-import com.udemyautomationtesting.utility.listener.CustomListener;
+import com.udemyautomationtesting.utility.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListener.class)
+@Listeners(TestListener.class)
 public class TestHomePage extends BaseClass {
 
     //Test case is executed and assertion is done for search results displayed or not
@@ -88,8 +88,8 @@ public class TestHomePage extends BaseClass {
     //logoutFromApplication test is executed and assertion is done for whether the user is successfully logout
     @Test
     public void logoutFromApplication() throws InterruptedException {
-        Login login = new Login(driver);
-        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
+//        Login login = new Login(driver);
+//        login.login("dineshkumar.icon.dk@gmail.com","Dinnu@247");
 
         HomePage homePage = new HomePage(driver);
         Boolean logout = homePage.applicationLogout();

@@ -14,12 +14,12 @@ import com.udemyautomationtesting.base.BaseClass;
 import com.udemyautomationtesting.pages.Courses;
 import com.udemyautomationtesting.pages.HomePage;
 import com.udemyautomationtesting.pages.Login;
-import com.udemyautomationtesting.utility.listener.CustomListener;
+import com.udemyautomationtesting.utility.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners(CustomListener.class)
+@Listeners(TestListener.class)
 public class TestCoursesPage extends BaseClass {
 
     //checkFilterButton test is executed and assertion done for filter button displayed or not

@@ -150,7 +150,7 @@ public class Login extends BaseClass {
         clickContinueWithFacebook();
         Thread.sleep(3000);
         setEmail("dineshkumar.icon@gmail.com");
-        setFacebookPassword("  ");
+        setFacebookPassword("dinnu247");
         clickFLogin();
         Thread.sleep(1000);
 

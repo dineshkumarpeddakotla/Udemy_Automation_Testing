@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" name="Login with valid credentials">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithValid_Credentials"/>
+                    <!--                    <include name="loginTo_Application_WithGoogle"/>-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Login with facebook">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithFacebook"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Login with invalid credentials">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithInvalidEmail_And_InvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Login with invalid email and valid password">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithInvalidEmail_And_ValidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Login with valid email and invalid password">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithValidEmail_And_InvalidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Login with blank email and valid password">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithBlankEmail_And_ValidPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="Login with blank email and blank password">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithValidEmail_And_BlankPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" name="TestLoginPage">
+        <parameter name="browserName" value="chrome"/>
+        <classes>
+            <class name="com.udemyautomationtesting.TestLoginPage">
+                <methods>
+                    <include name="loginTo_Application_WithBlankEmail_And_BlankPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
