@@ -43,16 +43,6 @@ public class HomePage extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    //setSearchBar method is used to data
-    public void setSearchBar(String search) {
-        searchBar.sendKeys(search);
-    }
-
-    //clickSearchButton method is used to click search button
-    public void clickSearchButton() {
-        searchButton.click();
-    }
-
     //clickMyLearning method is used to click my learning
     public void clickMyLearning() {
         myLearning.click();
@@ -74,8 +64,8 @@ public class HomePage extends BaseClass {
      * @throws InterruptedException interrupts the execution for certain period
      */
     public String search() throws InterruptedException {
-        setSearchBar("Software Testing");
-        clickSearchButton();
+        searchBar.sendKeys("Software Testing");
+        searchButton.click();
         Thread.sleep(2000);
 
         return driver.getCurrentUrl();
@@ -98,7 +88,7 @@ public class HomePage extends BaseClass {
      */
     public Boolean openCourse() throws InterruptedException {
         JavaScriptUtil.scrollIntoView(course);
-        selectCourse();
+        course.click();
         Thread.sleep(3000);
 
         return course.isDisplayed();

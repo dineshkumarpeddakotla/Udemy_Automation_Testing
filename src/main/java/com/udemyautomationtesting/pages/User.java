@@ -80,11 +80,6 @@ public class User extends BaseClass {
         return driver.getCurrentUrl();
     }
 
-    //clickUploadImage method is used to click on upload image
-    public void clickUploadImage() {
-        uploadImage.click();
-    }
-
     /**
      * uploadImage method is used to upload a image by using a EnterDataUsingRobotClass
      * @return boolean value for crop image button displayed
@@ -92,7 +87,7 @@ public class User extends BaseClass {
      * @throws InterruptedException interrupts execution for certain given period of time
      */
     public Boolean uploadImage() throws AWTException, InterruptedException {
-        clickUploadImage();
+        uploadImage.click();
         Thread.sleep(300);
         EnterDataUsingRobotClass.setClipboardData("C:\\Users\\dinnu\\Downloads\\download.jpg");
         Thread.sleep(300);

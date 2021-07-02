@@ -50,61 +50,16 @@ public class Login extends BaseClass {
         PageFactory.initElements(driver, this); //initElements method is used from PageFactory class
     }
 
-    //multiple methods are created for multiple web elements actions
-    public void clickLoginLink() {
-        loginLink.click();
-    }
-
-    public void setEmail(String inputEmail) {
-        email.sendKeys(inputEmail);
-    }
-
-    public void setPassword(String inputPassword) {
-        password.sendKeys(inputPassword);
-    }
-
-    public void clickLogin() {
-        login.click();
-    }
-
-    public void clickContinueWithGoogle() {
-        continueWithGoogle.click();
-    }
-
-    public void setGoogleEmail(String inputGoogleEmail) {
-        googleEmail.sendKeys(inputGoogleEmail);
-    }
-
-    public void clickNext() {
-        next.click();
-    }
-
-    public void setGooglePassword(String inputGooglePassword) {
-        googlePassword.sendKeys(inputGooglePassword);
-    }
-
-    public void clickContinueWithFacebook() {
-        continueWithFacebook.click();
-    }
-
-    public void setFacebookPassword(String inFacebookPassword) {
-        facebookPassword.sendKeys(inFacebookPassword);
-    }
-
-    public void clickFLogin() {
-        fLogin.click();
-    }
-
     /**
      * login method is used to login into application
      * @return page title
      * @throws InterruptedException interrupts the execution for certain period
      */
-    public String login(String email, String password) throws InterruptedException {
-        clickLoginLink();
-        setEmail(email);
-        setPassword(password);
-        clickLogin();
+    public String login(String emailId, String pass) throws InterruptedException {
+        loginLink.click();
+        email.sendKeys(emailId);
+        password.sendKeys(pass);
+        login.click();
         Thread.sleep(2000);
 
         return driver.getTitle();
@@ -116,8 +71,8 @@ public class Login extends BaseClass {
      * @throws InterruptedException interrupts the execution for certain period
      */
     public String loginWithGoogle() throws InterruptedException {
-        clickLoginLink();
-        clickContinueWithGoogle();
+        loginLink.click();
+        continueWithGoogle.click();
         Thread.sleep(1000);
 
         Set<String> windowHandles = driver.getWindowHandles();
@@ -130,11 +85,11 @@ public class Login extends BaseClass {
             System.out.println(actual);
         }
 
-        setGoogleEmail("dineshkumar.icon.dk@gmail.com");
-        clickNext();
+        googleEmail.sendKeys(" ");
+        next.click();
         Thread.sleep(1000);
-        setGooglePassword("  ");
-        clickNext();
+        googlePassword.sendKeys(" ");
+        next.click();
         Thread.sleep(3000);
 
         return driver.getTitle();
@@ -146,12 +101,12 @@ public class Login extends BaseClass {
      * @throws InterruptedException interrupts the execution for certain period
      */
     public String loginWithFacebook() throws InterruptedException {
-        clickLoginLink();
-        clickContinueWithFacebook();
+        loginLink.click();
+        continueWithFacebook.click();
         Thread.sleep(3000);
-        setEmail("dineshkumar.icon@gmail.com");
-        setFacebookPassword("dinnu247");
-        clickFLogin();
+        email.sendKeys("dineshkumar.icon@gmail.com");
+        facebookPassword.sendKeys(" ");
+        fLogin.click();
         Thread.sleep(1000);
 
         return driver.getTitle();

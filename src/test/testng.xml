@@ -5,6 +5,8 @@
         <parameter name="browserName" value="chrome"/>
         <classes>
             <class name="com.udemyautomationtesting.TestLoginPage">
+                <parameter name="email" value="dineshkumar.icon@gmail.com"/>
+                <parameter name="password" value="Dinnu@247"/>
 <!--            <class name="com.udemyautomationtesting.TestHomePage">-->
                 <methods>
                     <include name="loginTo_Application_WithValid_Credentials"/>
@@ -14,11 +16,13 @@
         </classes>
     </test>
     <test verbose="2" name="firefox browser">
+        <parameter name="browserName" value="firefox"/>
         <classes>
             <class name="com.udemyautomationtesting.TestLoginPage">
 <!--            <class name="com.udemyautomationtesting.TestHomePage">-->
+                <parameter name="email" value="dineshkumar.icon@gmail.com"/>
+                <parameter name="password" value="Dinnu@247"/>
                 <methods>
-                    <parameter name="browserName" value="firefox"/>
                     <include name="loginTo_Application_WithValid_Credentials"/>
 <!--                    <include name="logoutFromApplication"/>-->
                 </methods>

@@ -37,43 +37,18 @@ public class Registration extends BaseClass {
         PageFactory.initElements(driver, this); //initElements method is used from PageFactory class
     }
 
-    //multiple methods are created for multiple web elements actions
-    public void clickSignUp() {
-        signUp.click();
-    }
-
-    public void setFullName(String fName) {
-        fullName.sendKeys(fName);
-    }
-
-    public void setEmail(String enterEmail) {
-        email.sendKeys(enterEmail);
-    }
-
-    public void setPassword(String pass) {
-        password.sendKeys(pass);
-    }
-
-    public void clickSignUpButton() {
-        submit.click();
-    }
-
-    public void clickLogin() {
-        login.click();
-    }
-
     /**
      * registration method is used to register in application for new users
      * @return Title of page
      * @throws InterruptedException interrupts the execution for certain period
      */
     public String registration() throws InterruptedException {
-        clickSignUp();
+        signUp.click();
         Thread.sleep(2000);
-        setFullName("dinesh");
-        setEmail("dineshkumar.icon.dk@gmail.com");
-        setPassword("Dinnu@247");
-        clickSignUpButton();
+        fullName.sendKeys("dinesh");
+        email.sendKeys("dineshkumar.icon.dk@gmail.com");
+        password.sendKeys("");
+        submit.click();
 
         return driver.getTitle();
     }
@@ -85,9 +60,9 @@ public class Registration extends BaseClass {
      * @throws InterruptedException interrupts the execution for certain period
      */
     public String alreadyRegistered_User_ClickOnLogIn() throws InterruptedException {
-        clickSignUp();
+        signUp.click();
         Thread.sleep(3000);
-        clickLogin();
+        login.click();
 
         return driver.getTitle();
     }

@@ -11,17 +11,18 @@ package com.udemyautomationtesting;
 
 import com.udemyautomationtesting.base.BaseClass;
 import com.udemyautomationtesting.pages.Login;
-import com.udemyautomationtesting.utility.DataProvider;
 import com.udemyautomationtesting.utility.listener.TestListener;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 @Listeners(TestListener.class)
 public class TestLoginPage extends BaseClass {
 
     //Test case is executed and assertion is done for login
-    @Test(dataProvider = "LoginDetails", dataProviderClass = DataProvider.class)
+    @Parameters({"email","password"})
+    @Test
     public void loginTo_Application_WithValid_Credentials(String email, String password) throws InterruptedException {
         Login login = new Login(driver);
         String actualTitle = login.login(email,password);
