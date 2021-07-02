@@ -17,7 +17,7 @@ import org.testng.ITestResult;
 
 import java.io.IOException;
 
-public class TestListener extends BaseClass implements ITestListener{
+public class TestListener extends BaseClass implements ITestListener {
 
     //object is created
     CaptureScreenshot captureScreenshot = new CaptureScreenshot();

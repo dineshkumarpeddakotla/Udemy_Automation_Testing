@@ -26,7 +26,7 @@ public class BaseClass {
      * @throws InterruptedException interrupts the execution for certain period
      */
     @Parameters("browserName")
-    @BeforeTest //execute before test
+    @BeforeMethod //execute before test
     public void setUp(String browserName) throws InterruptedException {
         driver = CrossBrowser.selectDriver(browserName);
         driver.get("https://www.udemy.com/");
@@ -35,7 +35,7 @@ public class BaseClass {
     }
 
     //tearDown method closes all connections
-    @AfterTest //execute after test
+    @AfterMethod //execute after test
     public void tearDown() {
         driver.quit();
     }

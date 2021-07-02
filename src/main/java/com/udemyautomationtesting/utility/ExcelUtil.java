@@ -23,25 +23,24 @@ public class ExcelUtil {
      * @return cell value
      * @throws IOException file or directory not found found
      */
-    public String[][] readData(String filePath, String sheetName) throws IOException {
+    public Object[][] readData(String filePath, String sheetName) throws IOException {
 
         FileInputStream file = new FileInputStream(filePath);
         XSSFWorkbook workbook = new XSSFWorkbook(file);
         XSSFSheet sheet = workbook.getSheet(sheetName);
 
         int rows = sheet.getLastRowNum();
-        System.out.println(rows);
         int columns = sheet.getRow(0).getLastCellNum();
 
-        String[][] array = new String[rows][columns];
+        String[][] data = new String[rows-1][columns];
 
-        for (int i = 1; i<rows; i++) {
+        for (int i = 1; i < rows; i++) {
             XSSFRow currentRow = sheet.getRow(i);
             for (int j = 0; j<columns; j++ ) {
-                array[i][j] = currentRow.getCell(j).toString();
+                data[i-1][j] = currentRow.getCell(j).toString();
             }
         }
 
-        return array;
+        return data;
     }
 }
